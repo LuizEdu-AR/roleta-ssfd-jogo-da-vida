@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jogo da Vida - Roleta do Corpo de Bombeiros">
+  <title>Jogo da Vida - Corpo de Bombeiros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <div class="skyline" aria-hidden="true"></div>
+
+    <section class="hero-card">
+      <header class="topbar">
+        <img src="assets/logo-bombeiros.png" alt="Logo South State Fire Dept." class="logo">
+
+        <div>
+          <h1>Jogo da Vida - Corpo de Bombeiros</h1>
+        </div>
+
+        <div class="badge">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22">
+            <path d="M20 13c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V5l8-3 8 3v8Z"></path>
+          </svg>
+          LIVE DA ROLETA
+        </div>
+      </header>
+
+      <section class="game-area">
+        <div class="board-path left-path">
+          <span>CARREIRA</span>
+          <span>FAMÍLIA</span>
+          <span>CASA</span>
+        </div>
+
+        <div class="wheel-wrap">
+          <div class="pointer" aria-hidden="true">▼</div>
+
+          <div class="wheel-shadow">
+            <button class="wheel" id="wheel" type="button" aria-label="Girar roleta">
+              <span class="hub">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="34" height="34">
+                  <path d="m12 2.5 2.9 5.88 6.49.94-4.7 4.58 1.11 6.47L12 17.32l-5.8 3.05 1.11-6.47-4.7-4.58 6.49-.94L12 2.5Z"></path>
+                </svg>
+                GIRAR
+              </span>
+            </button>
+          </div>
+
+          <button class="spin-btn" id="spinButton" type="button">Girar Roleta</button>
+        </div>
+
+        <aside class="result-card">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="44" height="44">
+            <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"></path>
+            <path d="M7 6H4v2a4 4 0 0 0 4 4M17 6h3v2a4 4 0 0 1-4 4"></path>
+          </svg>
+          <p>Resultado</p>
+          <strong id="result">-</strong>
+          <small id="resultMessage">Clique para sortear de 1 a 10</small>
+          <button class="reset" id="resetButton" type="button">Limpar histórico</button>
+        </aside>
+      </section>
+
+      <footer class="history">
+        <strong>Últimos resultados:</strong>
+        <div id="history"><em>Nenhum giro ainda</em></div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
